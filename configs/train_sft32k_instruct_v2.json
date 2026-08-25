@@ -1,0 +1,50 @@
+{
+  "schema_version": "touchagent.sft_config.v2",
+  "dataset_version": "TouchAgent-Instruct-v2",
+  "model_name_or_path": "../models/Qwen2.5-7B",
+  "output_dir": "../runs/touchagent_qwen2_5_7b_lora_sft32k_instruct_v2_seed42",
+  "data_path": "../data/touchagent_sft32k_instruct_v2.json.gz",
+  "data_manifest_path": "../data/touchagent_sft32k_instruct_v2.manifest.json",
+  "seed": 42,
+  "max_length": 2048,
+  "expected_world_size": 4,
+  "per_device_train_batch_size": 12,
+  "gradient_accumulation_steps": 1,
+  "num_train_epochs": 5.0,
+  "max_steps": -1,
+  "learning_rate": 0.00005,
+  "max_grad_norm": 1.0,
+  "weight_decay": 0.0,
+  "warmup_ratio": 0.03,
+  "lr_scheduler_type": "cosine",
+  "optim": "adamw_torch",
+  "logging_steps": 1,
+  "save_steps": 500,
+  "save_total_limit": 3,
+  "bf16": true,
+  "tf32": true,
+  "gradient_checkpointing": true,
+  "dataloader_num_workers": 4,
+  "attention_implementation": "flash_attention_2",
+  "deepspeed_config_path": "deepspeed/zero2_v1.json",
+  "checkpoint_selection_policy": "final_adapter",
+  "lora": {
+    "profile": "chat_tokens_v2",
+    "r": 128,
+    "alpha": 256,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj",
+      "lm_head"
+    ],
+    "modules_to_save": [
+      "embed_tokens"
+    ]
+  }
+}

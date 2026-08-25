@@ -1,0 +1,86 @@
+{
+  "schema_version": "touchagent.sft_frozen_data_manifest.v1",
+  "dataset_version": "TouchAgent-Instruct-v2",
+  "data_file": "touchagent_sft32k_instruct_v2.json.gz",
+  "compression": "gzip",
+  "gzip_mtime": 0,
+  "serialization": "utf8_compact_json_with_trailing_newline",
+  "compressed_size_bytes": 7854295,
+  "uncompressed_size_bytes": 104282021,
+  "compressed_sha256": "e3d8db316692c3c440ed9b4db3063500ac8de5aafa31e73a9641bd60f0e026b1",
+  "uncompressed_sha256": "8f8419ecd453bba7cbb598dd14dbad1e99504c9004201fdb017fcdb0459a96a0",
+  "record_count": 32000,
+  "assistant_supervision_count": 142496,
+  "global_ids_unique": true,
+  "selected_id_order_sha256": "da344cecc5b63a3abfb54f3e3e53268aa973653c4e5fa3a2f3e23412f4fa4f36",
+  "selected_source_counts": {
+    "attribute": 7782,
+    "dynamic": 970,
+    "interaction": 7786,
+    "matching": 7782,
+    "scene": 7680
+  },
+  "schema_version_counts": {
+    "touchagent_attribute_instruct_v2": 7782,
+    "touchagent_dynamic_instruct_v2": 970,
+    "touchagent_interaction_instruct_v2": 7786,
+    "touchagent_matching_instruct_v2": 7782,
+    "touchagent_scene_instruct_v2": 7680
+  },
+  "tokenizer_audit_contract": {
+    "model": "Qwen/Qwen2.5-7B",
+    "model_revision": "d149729398750b98c0af14eb82c78cfe92750796",
+    "max_length": 2048,
+    "expected_min_tokens": 424,
+    "expected_max_tokens": 948,
+    "expected_min_supervised_tokens": 227,
+    "expected_max_supervised_tokens": 496,
+    "expected_supervised_im_end_tokens": 142496,
+    "expected_truncated_records": 0
+  },
+  "provenance": {
+    "source_dataset_record_count": 40000,
+    "excluded_rl_record_count": 8000,
+    "source_split_manifest_schema": "touchagent.sft_rl_split_manifest.v1",
+    "source_split_manifest_sha256": "42c40adf98d712df075e4e6619926a134958ad338611e5d317b5e39b5a189aa6",
+    "source_split_fingerprint_sha256": "5bd9ac6e3339186e5d1d1db6da439e6e87541528c018127da81205ed13fe4bfb",
+    "source_sft_id_order_sha256": "da344cecc5b63a3abfb54f3e3e53268aa973653c4e5fa3a2f3e23412f4fa4f36",
+    "sources": [
+      {
+        "name": "attribute",
+        "sha256": "38dd966260f2e303782ae269b21a938d5458941232ebfb41105dc7fb3241d021",
+        "record_count": 9728,
+        "sft_count": 7782,
+        "rl_count": 1946
+      },
+      {
+        "name": "matching",
+        "sha256": "18fe89681faf4d20f813015da07a08cc4d7e7322e053ea907ec22f2fbff64110",
+        "record_count": 9728,
+        "sft_count": 7782,
+        "rl_count": 1946
+      },
+      {
+        "name": "interaction",
+        "sha256": "ff07bdea1cb7d65e21dff7ad8ec6136980fb398e1ebdf884c48616579773b70e",
+        "record_count": 9732,
+        "sft_count": 7786,
+        "rl_count": 1946
+      },
+      {
+        "name": "scene",
+        "sha256": "c47c1cba78a0aadd5c2ea9fffa2288173719dad1720cfe8b4179b4da36f4bd56",
+        "record_count": 9600,
+        "sft_count": 7680,
+        "rl_count": 1920
+      },
+      {
+        "name": "dynamic",
+        "sha256": "bc3892cd558132ee56c59d01c31f97c85406ad1c72e2ba29168cf75559322127",
+        "record_count": 1212,
+        "sft_count": 970,
+        "rl_count": 242
+      }
+    ]
+  }
+}

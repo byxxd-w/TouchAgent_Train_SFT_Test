@@ -1,0 +1,69 @@
+{
+  "schema_version": "touchagent.sft_smoke_validation.v1",
+  "status": "passed",
+  "validated_at": "2026-08-25T19:14:23+08:00",
+  "launcher": "scripts/run_sft32k_instruct_v2.sh",
+  "run_mode": "smoke",
+  "command_contract": "RUN_MODE=smoke CUDA_DEVICES=0,1,2,3 MODEL_PATH=<local-qwen2.5-7b> OUTPUT_DIR=<external-empty-directory> bash scripts/run_sft32k_instruct_v2.sh",
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.1.2+cu121",
+    "torch_cuda": "12.1",
+    "transformers": "4.42.3",
+    "peft": "0.12.0",
+    "accelerate": "0.33.0",
+    "deepspeed": "0.13.5",
+    "flash_attention": "2.5.9.post1",
+    "deepspeed_zero_stage": 2,
+    "kernel_release": "5.4.250-9-velinux1-amd64"
+  },
+  "hardware": {
+    "world_size": 4,
+    "gpu_name": "NVIDIA A800-SXM4-80GB",
+    "gpu_count": 4,
+    "bf16_supported": true
+  },
+  "model": {
+    "model_id": "Qwen/Qwen2.5-7B",
+    "revision": "d149729398750b98c0af14eb82c78cfe92750796",
+    "checksum_contract_sha256": "e15044fd0da01e7fae57a6fe4a7f68002d87f601f2812fa92a7b378525b16e2a"
+  },
+  "data": {
+    "record_count": 32000,
+    "assistant_supervision_count": 142496,
+    "selected_id_order_sha256": "da344cecc5b63a3abfb54f3e3e53268aa973653c4e5fa3a2f3e23412f4fa4f36",
+    "compressed_sha256": "e3d8db316692c3c440ed9b4db3063500ac8de5aafa31e73a9641bd60f0e026b1"
+  },
+  "training": {
+    "completed": true,
+    "final_global_step": 3,
+    "effective_global_batch_size": 48,
+    "step_losses": [
+      1.7027,
+      1.7211,
+      1.5112
+    ],
+    "step_grad_norms": [
+      23.102920532226562,
+      23.745075225830078,
+      35.962398529052734
+    ],
+    "aggregate_train_loss": 1.6450155178705852,
+    "train_runtime_seconds": 28.7184,
+    "trainable_parameters": 887881728,
+    "total_parameters": 8503498240
+  },
+  "artifact_save_validation": {
+    "adapter_saved": true,
+    "adapter_size_bytes": 2865813264,
+    "adapter_sha256": "259ea332270de55c61ff076d67714fb0cc059cee7b28051ded145540134afa46",
+    "tokenizer_saved": true,
+    "trainer_state_saved": true,
+    "run_summary_saved": true,
+    "temporary_artifacts_removed_after_validation": true
+  },
+  "warnings": [
+    "The validated Linux kernel is below DeepSpeed's recommended 5.5 minimum.",
+    "The pynvml deprecation and Transformers evaluation_strategy warnings do not affect the completed smoke run."
+  ]
+}

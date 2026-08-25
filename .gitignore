@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+
+models/*
+!models/.gitkeep
+runs/*
+!runs/.gitkeep
+
+*.log
+loss_curve.html
+loss_curve.png
+loss_curve.svg

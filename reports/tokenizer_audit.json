@@ -1,0 +1,25 @@
+{
+  "schema_version": "touchagent.sft_audit.v2",
+  "dataset_version": "TouchAgent-Instruct-v2",
+  "records": 32000,
+  "assistant_supervisions": 142496,
+  "supervised_im_end_tokens": 142496,
+  "im_end_token_id": 151645,
+  "source_counts": {
+    "attribute": 7782,
+    "dynamic": 970,
+    "interaction": 7786,
+    "matching": 7782,
+    "scene": 7680
+  },
+  "selected_id_order_sha256": "da344cecc5b63a3abfb54f3e3e53268aa973653c4e5fa3a2f3e23412f4fa4f36",
+  "min_tokens": 424,
+  "max_tokens": 948,
+  "min_supervised_tokens": 227,
+  "max_supervised_tokens": 496,
+  "max_length": 2048,
+  "truncated_records": 0,
+  "tokenizer": "Qwen/Qwen2.5-7B@d149729398750b98c0af14eb82c78cfe92750796",
+  "data_file": "touchagent_sft32k_instruct_v2.json.gz",
+  "data_manifest": "touchagent_sft32k_instruct_v2.manifest.json"
+}

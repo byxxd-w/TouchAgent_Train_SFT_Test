@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "touchagent-train-sft"
+version = "1.0.0"
+description = "Reproducible supervised fine-tuning for the TouchAgent main Agent"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+  "pydantic==2.10.6",
+]
+
+[project.scripts]
+touchagent-train-sft = "touchagent_train.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["touchagent_train*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
